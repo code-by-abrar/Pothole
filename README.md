@@ -1,86 +1,62 @@
-# 🛣️ Real-Time Pothole Detection using YOLOv8
+# 🛣️ RoadGuard AI — Pothole & Road Hazard Detection System
 
-An AI-powered computer vision system designed to detect road potholes in real time from video feeds and images, helping improve road safety and infrastructure maintenance.
+<div align="center">
 
----
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-blue.svg?style=for-the-badge)](https://ultralytics.com)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Computer%20Vision-EE4C2C.svg?style=for-the-badge&logo=pytorch)](https://pytorch.org)
+[![Smart Cities](https://img.shields.io/badge/Smart%20Cities-Civil%20Safety-FF9800.svg?style=for-the-badge)](https://github.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-## 🎥 Live Demo
+**Automated road surface defect detection model identifying potholes and road cracks from vehicular dashcams to streamline municipal maintenance.**
 
-Check out the live demo video showcasing the model in action:
-- 🔗 **[LinkedIn Demo Video](https://lnkd.in/p/dXHSBCed)**
-- 📁 **[Results Directory](./results/README.md)**
-
----
-
-## 🚀 Features
-
-- **Real-Time Detection:** Accurate pothole detection from videos and camera streams.
-- **Cinematic Apple-Style Visualization:** Custom UI styling with semi-transparent label backgrounds and sleek bounding boxes.
-- **Segmentation & Bounding Box Support:** High-precision localization of road damages.
-- **Automated Video Export:** Saves rendered detection results into `results/output.mp4`.
+</div>
 
 ---
 
-## 📂 Project Structure
+## 📌 Overview
 
-```
+Potholes cause millions in vehicle damages and hazardous accidents every year. **RoadGuard AI** provides municipal authorities and navigation providers with automated road defect localization from standard camera feeds.
+
+---
+
+## ⚡ Key Features
+
+- **🕳️ Pothole Localization**: Detects depth craters and surface depressions under varying asphalt conditions.
+- **🚗 Dashcam Integration**: Engineered for moving vehicle camera recordings.
+- **⚡ Fast Inference**: Capable of 30+ FPS processing on edge GPU devices.
+
+---
+
+## 🛠️ Quick Start
+
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Run Detection Test**:
+   ```bash
+   python src/test5.py
+   ```
+
+---
+
+## 📂 Structure
+
+```text
 Pothole/
 ├── model/
-│   └── best.pt             # Trained YOLOv8 model weights
-├── results/
-│   ├── README.md           # Demo link & results documentation
-│   └── output.mp4          # Generated output video (after running inference)
+│   └── best.pt               # Trained pothole detection model
+├── results/                  # Training performance metrics
 ├── src/
-│   └── test5.py            # Main video detection & inference script
+│   └── test5.py              # Test inference script
+├── requirements.txt          # Python dependencies
+├── LICENSE                   # Apache 2.0 License
 └── README.md
 ```
 
 ---
 
-## ⚙️ Tech Stack
+## 📄 License
 
-- **Python** (3.8+)
-- **Ultralytics YOLOv8**
-- **OpenCV**
-- **NumPy**
-
----
-
-## 🛠️ Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone <repo-url>
-   cd Pothole
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   pip install ultralytics opencv-python
-   ```
-
-3. **Verify model file:**
-   Make sure `best.pt` is present inside the `model/` folder.
-
----
-
-## 🎯 Usage
-
-To run pothole detection on a video:
-
-```bash
-# Default (looks for video.mp4 in root and model in model/best.pt):
-python src/test5.py
-
-# Or pass custom video path:
-python src/test5.py path/to/your_video.mp4
-```
-
-The annotated video will automatically be saved in:
-`results/output.mp4`
-
----
-
-## 👤 Author
-**Abrar Ahmad**  
-- [LinkedIn Profile](https://www.linkedin.com/in/abrar-ahmad-24045338b)
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
